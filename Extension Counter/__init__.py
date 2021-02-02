@@ -1,10 +1,10 @@
 import os
 import sys
 
-EXENSTION_FILE = ".py"  # Change it to what type of file you want to search
+EXENSTION_FILE = ".sample"  # Change it to what type of file you want to search
 
 # to make it easier to read, i put this here to show how many files i have in Python instead of .py
-EXENSTION_FILE_FULL = "Python"
+EXENSTION_FILE_FULL = "Sample FILES"
 
 # CHANGE THIS TO WHERE YOU WANT TO SEARCH IN YOUR FOLDER, IF NONE, REMOVE IT FROM HERE AND FROM THE CODE
 FOLDER_TO_CHECK = "files"
@@ -21,7 +21,7 @@ def count_py_files_repos(dirname):
 
         # Why minus one you may ask, well, if you want to count this file has one of them, remove the minus one, in the code below
 
-        print(f"{dirname} has {count-1} {EXENSTION_FILE_FULL} Files")
+        print(f"{dirname}{FOLDER_TO_CHECK} has {count-1} {EXENSTION_FILE_FULL} Files")
 
     for name in os.listdir(dirname):
         path = os.path.join(dirname, name)
